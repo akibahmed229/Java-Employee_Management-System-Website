@@ -69,7 +69,7 @@ Copy code
 
 ## The main.js file is the main entry point of the application.
 
-## The index.js file is responsible for rendering the root component.
+## The App.js file is responsible for rendering the root component.
 
 ## The styles.css file contains custom styles for the website.
 
