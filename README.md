@@ -2,9 +2,7 @@
 
 ## This is a website created for the Java Employee Management System project. The Java Employee Management System is a desktop application developed using Java AWT and Swing libraries, which allows users to manage employee details through a graphical user interface.
 
-  <br/>
-
-# Features
+## Features
 
 1.  Search and display employee details based on employee ID.
 
@@ -17,7 +15,7 @@
 
   <br/>
 
-# Technologies Used
+# Technologies Used For This Site
 
 - React.js
 - Tailwind CSS
