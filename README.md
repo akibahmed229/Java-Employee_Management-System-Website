@@ -28,7 +28,7 @@
 
 ## -To run this project locally, follow these steps:
 
-Clone the repository: `git clone <https://github.com/akibahmed229/Java-CRUD-App/tree/main>`
+Clone the repository: `git clone https://github.com/akibahmed229/Java-Employee_Management-System-Website.git`
 
   <br/>
 
