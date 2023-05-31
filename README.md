@@ -71,7 +71,7 @@ Copy code
 
 ## The App.js file is responsible for rendering the root component.
 
-## The styles.css file contains custom styles for the website.
+## The index.css file contains custom styles for the website.
 
   <br/>
 
