@@ -30,7 +30,7 @@ Clone the repository: `git clone https://github.com/akibahmed229/Java-Employee_M
 
   <br/>
 
-## Navigate to the project directory: cd java-employee-management-system-website
+## Navigate to the project directory: `cd java-employee-management-system-website`
 
 1. Install the dependencies: `yarn install` <br/>
 2. Start the development server: `npm start` <br/>
