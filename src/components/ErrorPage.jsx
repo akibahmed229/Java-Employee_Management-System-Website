@@ -1,11 +1,21 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const ErrorPage = () => {
+  const topRef = useRef(null);
+
   useEffect(() => {
     document.title = "Error 404";
+
+    if (topRef.current) {
+      window.scrollTo(0, 0);
+    }
   }, []);
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div
+      className="flex flex-col items-center justify-center h-screen"
+      ref={topRef}
+    >
       <h1 className="text-8xl font-bold text-red-500 mb-4">Error 404</h1>
       <p className="text-2xl text-gray-800">Page not found</p>
       <button

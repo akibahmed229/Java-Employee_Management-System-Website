@@ -1,11 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const Techonology = () => {
+  const topRef = useRef(null);
+
   useEffect(() => {
     document.title = "Techonology Used";
+
+    if (topRef.current) {
+      window.scrollTo(0, 0);
+    }
   }, []);
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" ref={topRef}>
       <div className="container mx-auto py-10">
         <h1 className="text-4xl font-bold mb-6">Technology Used</h1>
 

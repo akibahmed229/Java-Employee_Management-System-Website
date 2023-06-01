@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -38,12 +38,18 @@ const ImageSlider = () => {
 };
 
 const Home = () => {
+  const topRef = useRef(null);
+
   useEffect(() => {
     document.title = "Employee Management System";
+
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }, []);
 
   return (
-    <div>
+    <div ref={topRef}>
       <div className="flex flex-col items-center justify-center min-h-screen ">
         <h1 className="md:text-4xl lg:text-4xl xl:text-4xl text-2xl font-bold mb-8 ">
           Employee Management System

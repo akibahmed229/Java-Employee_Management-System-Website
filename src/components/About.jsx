@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const About = () => {
+  const topRef = useRef(null);
+
   const developers = [
     {
       name: "Akib Ahmed",
@@ -30,10 +32,17 @@ const About = () => {
 
   useEffect(() => {
     document.title = "About | Employee Management System";
+
+    if (topRef.current) {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen ">
+    <div
+      className="flex flex-col items-center justify-center min-h-screen"
+      ref={topRef}
+    >
       <h1 className="text-4xl font-bold mb-8 mt-8">
         About Employee Management System
       </h1>

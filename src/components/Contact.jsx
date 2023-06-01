@@ -1,12 +1,21 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const Contact = () => {
+  const topRef = useRef(null);
+
   useEffect(() => {
     document.title = "Contact | Employee Management System";
+
+    if (topRef.current) {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen  mx-auto ">
+    <div
+      className="flex flex-col items-center justify-center h-screen  mx-auto"
+      ref={topRef}
+    >
       <div className="max-w-6xl p-8 bg-white  shadow-xl rounded-lg ">
         <h1 className="text-2xl font-bold md:mb-6 lg:mb-6 xl:mb-6">
           Contract Services
