@@ -39,7 +39,7 @@ const ImageSlider = () => {
 
 const Home = () => {
   useEffect(() => {
-    document.title = "Home | Employee Management System";
+    document.title = "Employee Management System";
   }, []);
 
   return (
