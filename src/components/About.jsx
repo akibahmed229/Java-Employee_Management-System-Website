@@ -7,8 +7,7 @@ const About = ({ darkMode }) => {
     {
       name: "Akib Ahmed",
       role: "Full Stack Developer",
-      photo:
-        "https://images.unsplash.com/photo-1610353458972-73d1d9313347?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      photo: "https://avatars.githubusercontent.com/u/49590623?v=4",
     },
     {
       name: "Pollob Chondro Dash",
@@ -20,7 +19,7 @@ const About = ({ darkMode }) => {
       name: "Himel",
       role: "UI/UX Designer",
       photo:
-        "https://images.unsplash.com/photo-1550703703-c6f229024ba9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHBob3RvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+        "https://media.licdn.com/dms/image/C4E03AQHyfGl8U3enDg/profile-displayphoto-shrink_200_200/0/1611585662479?e=1691020800&v=beta&t=gMGoW_L4c7oMomK_6v4KFCRLGjKSBwAjLuOdC8U4KAI",
     },
     {
       name: "Nahid",

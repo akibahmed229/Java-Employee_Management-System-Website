@@ -21,9 +21,15 @@ function Navbar({ darkMode, setDarkMode }) {
     switch (e.target.value) {
       case "option1":
         navigate("/technology");
+        setTimeout(() => {
+          e.target.value = "option3";
+        }, 500);
         break;
       case "option2":
         window.open("https://github.com/akibahmed229/Java-CRUD-App", `_blank`);
+        setTimeout(() => {
+          e.target.value = "option3";
+        }, 500);
         break;
       default:
         break;
