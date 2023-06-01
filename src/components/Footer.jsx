@@ -33,14 +33,20 @@ const Footer = () => {
           <div className="w-full md:w-1/3 lg:w-1/4 mb-4">
             <h2 className="text-lg font-bold mb-2">Social Media</h2>
             <ul className="list-none">
-              <li className="mb-2">
-                <a href="#facebook">Facebook</a>
+              <li className="mb-2 cursor-pointer">
+                <a onClick={() => window.open("https://www.facebook.com")}>
+                  Facebook
+                </a>
               </li>
-              <li className="mb-2">
-                <a href="#twitter">Twitter</a>
+              <li className="mb-2 cursor-pointer">
+                <a onClick={() => window.open("https://twitter.com")}>
+                  Twitter
+                </a>
               </li>
-              <li className="mb-2">
-                <a href="#instagram">Instagram</a>
+              <li className="mb-2 cursor-pointer">
+                <a onClick={() => window.open("https://instagram.com")}>
+                  Instagram
+                </a>
               </li>
             </ul>
           </div>

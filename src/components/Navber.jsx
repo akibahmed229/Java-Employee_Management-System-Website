@@ -50,7 +50,9 @@ function Navbar() {
                 defaultValue="option3"
                 onChange={handleDropeDownChange}
               >
-                <option value="option3" hidden>Select Category</option>
+                <option value="option3" hidden>
+                  Select Category
+                </option>
                 <option value="option1">Technology</option>
                 <option value="option2">Source Code</option>
               </select>
