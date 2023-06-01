@@ -7,25 +7,22 @@ const About = ({ darkMode }) => {
     {
       name: "Akib Ahmed",
       role: "Full Stack Developer",
-      photo: "https://avatars.githubusercontent.com/u/49590623?v=4",
+      photo: "/public/images/Ahmed-logo.jpg",
     },
     {
       name: "Pollob Chondro Dash",
       role: "Fronted Developer",
-      photo:
-        "https://images.unsplash.com/photo-1606893995103-a431bce9c219?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHBob3RvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      photo: "/public/images/pollob.png",
     },
     {
       name: "Himel",
       role: "UI/UX Designer",
-      photo:
-        "https://media.licdn.com/dms/image/C4E03AQHyfGl8U3enDg/profile-displayphoto-shrink_200_200/0/1611585662479?e=1691020800&v=beta&t=gMGoW_L4c7oMomK_6v4KFCRLGjKSBwAjLuOdC8U4KAI",
+      photo: "/public/images/Hemel.jpg",
     },
     {
       name: "Nahid",
       role: "UI/UX Designer",
-      photo:
-        "https://images.unsplash.com/photo-1606122017369-d782bbb78f32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHBob3RvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      photo: "/public/images/nahidjpg.jpg",
     },
   ];
 
@@ -71,7 +68,7 @@ const About = ({ darkMode }) => {
               <img
                 src={developer.photo}
                 alt={developer.name}
-                className="w-[60%] h-46 mx-auto mb-4"
+                className="object-cover w-[35rem] h-[30rem] mx-auto mb-4"
               />
               <h3 className="text-xl font-bold mb-2 text-center">
                 {developer.name}

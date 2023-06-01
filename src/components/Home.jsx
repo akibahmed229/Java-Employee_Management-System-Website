@@ -5,16 +5,32 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const ImageSlider = () => {
   const images = [
     {
-      src: "https://i.pinimg.com/originals/a7/6d/83/a76d83daba2effd74bd78bc061ba8675.jpg",
+      src: "/public/images/splash.png",
       alt: "Image 1",
     },
     {
-      src: "https://images.pexels.com/photos/2913125/pexels-photo-2913125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      src: "/public/images/login.png",
       alt: "Image 2",
     },
     {
-      src: "https://images.pexels.com/photos/15245702/pexels-photo-15245702/free-photo-of-anathema.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      src: "/public/images/home.png",
       alt: "Image 3",
+    },
+    {
+      src: "/public/images/add.png",
+      alt: "Image 4",
+    },
+    {
+      src: "/public/images/view.png",
+      alt: "Image 5",
+    },
+    {
+      src: "/public/images/update.png",
+      alt: "Image 6",
+    },
+    {
+      src: "/public/images/delete.png",
+      alt: "Image 7",
     },
   ];
 
@@ -30,7 +46,7 @@ const ImageSlider = () => {
     >
       {images.map((image, index) => (
         <div key={index} className="mb-10 w-[30%] h-[auto] m-auto">
-          <img src={image.src} alt={image.alt} className="object-cover " />
+          <img src={image.src} alt={image.alt} className="object-cover" />
         </div>
       ))}
     </Carousel>
