@@ -49,8 +49,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div ref={topRef}>
-      <div className="flex flex-col items-center justify-center min-h-screen ">
+    <div>
+      <div
+        className="flex flex-col items-center justify-center min-h-screen"
+        ref={topRef}
+      >
         <h1 className="md:text-4xl lg:text-4xl xl:text-4xl text-2xl font-bold mb-8 ">
           Employee Management System
         </h1>
