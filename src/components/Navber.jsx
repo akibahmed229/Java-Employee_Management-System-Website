@@ -1,14 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleDropeDownChange = (e) => {
     e.preventDefault();
     switch (e.target.value) {
       case "option1":
-        window.location.href = "/technology";
+        navigate("/technology");
         break;
       case "option2":
         window.open("https://github.com/akibahmed229/Java-CRUD-App", `_blank`);

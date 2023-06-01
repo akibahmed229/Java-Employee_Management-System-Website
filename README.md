@@ -63,11 +63,11 @@ Copy code
 
 ## The src directory contains the React components for different pages and common components like Navbar and Footer.
 
-## The main.js file is the main entry point of the application.
+1. The main.js file is the main entry point of the application.
 
-## The App.js file is responsible for rendering the root component.
+2. The App.js file is responsible for rendering the root component.
 
-## The index.css file contains custom styles for the website.
+3. The index.css file contains custom styles for the website.
 
   <br/>
 
