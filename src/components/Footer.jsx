@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-6">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 text-center">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/3 lg:w-1/4 mb-4">
             <h2 className="text-lg font-bold mb-2">Company</h2>
@@ -16,7 +16,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/3 lg:w-1/4 mb-4">
+          <div className="w-full md:w-1/3 lg:w-1/4 mb-4 text-center">
             <h2 className="text-lg font-bold mb-2">Resources</h2>
             <ul className="list-none">
               <li className="mb-2">
@@ -30,7 +30,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/3 lg:w-1/4 mb-4">
+          <div className="w-full md:w-1/3 lg:w-1/4 mb-4 text-center">
             <h2 className="text-lg font-bold mb-2">Social Media</h2>
             <ul className="list-none">
               <li className="mb-2 cursor-pointer">
