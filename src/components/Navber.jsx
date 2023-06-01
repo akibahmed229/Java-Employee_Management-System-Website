@@ -11,7 +11,6 @@ function Navbar() {
     switch (e.target.value) {
       case "option1":
         navigate("/technology");
-
         break;
       case "option2":
         window.open("https://github.com/akibahmed229/Java-CRUD-App", `_blank`);
