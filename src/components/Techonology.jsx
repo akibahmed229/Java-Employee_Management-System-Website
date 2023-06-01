@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const Techonology = () => {
+const Techonology = ({ darkMode }) => {
   const topRef = useRef(null);
 
   useEffect(() => {
@@ -24,16 +24,20 @@ const Techonology = () => {
           />
         </div>
 
-        <div className="bg-white p-6 rounded-md shadow-2xl">
+        <div
+          className={`${
+            darkMode ? "bg-[#1f2937]" : "bg-white"
+          } p-6 rounded-md shadow-2xl`}
+        >
           <h2 className="text-2xl font-bold mb-4">Java AWT & Swing</h2>
-          <p className="text-gray-700 mb-4">
+          <p className={`${darkMode ? "text-white" : "text-gray-700"} mb-4`}>
             Java AWT (Abstract Window Toolkit) and Swing libraries are utilized
             for creating the graphical user interface of the Employee Management
             System. These libraries provide a set of components and classes to
             build the UI components such as labels, text fields, choice boxes,
             and buttons.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className={`${darkMode ? "text-white" : "text-gray-700"} mb-4`}>
             AWT and Swing offer a rich set of features for creating interactive
             and responsive interfaces. They provide the foundation for building
             the user interface elements and handling user interactions.
@@ -48,14 +52,18 @@ const Techonology = () => {
           />
         </div>
 
-        <div className="bg-white p-6 mt-6 rounded-md shadow-2xl">
+        <div
+          className={`${
+            darkMode ? "bg-[#1f2937]" : "bg-white"
+          } p-6 rounded-md shadow-2xl`}
+        >
           <h2 className="text-2xl font-bold mb-4">JCalendar</h2>
-          <p className="text-gray-700 mb-4">
+          <p className={`${darkMode ? "text-white" : "text-gray-700"} mb-4`}>
             JCalendar is a Java library used in the Employee Management System
             for handling date selection and display. It provides a calendar
             component that allows users to pick a date conveniently.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className={`${darkMode ? "text-white" : "text-gray-700"} mb-4`}>
             The JCalendar library offers various features such as customizable
             date formats, date range selection, and internationalization
             support. It enhances the user experience by simplifying the
@@ -71,15 +79,19 @@ const Techonology = () => {
           />
         </div>
 
-        <div className="bg-white p-6 mt-6 rounded-md shadow-2xl">
+        <div
+          className={`${
+            darkMode ? "bg-[#1f2937]" : "bg-white"
+          } p-6 rounded-md shadow-2xl`}
+        >
           <h2 className="text-2xl font-bold mb-4">OS File System</h2>
-          <p className="text-gray-700 mb-4">
+          <p className={`${darkMode ? "text-white" : "text-gray-700"} mb-4`}>
             The Employee Management System leverages the OS file system for
             performing CRUD operations on employee data. Employee details are
             stored in a text file within the file system, allowing for easy
             management and persistence of employee records.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className={`${darkMode ? "text-white" : "text-gray-700"} mb-4`}>
             By utilizing the OS file system, the program enables efficient
             storage and retrieval of employee data. It uses file read and write
             operations to interact with the text file, ensuring the integrity

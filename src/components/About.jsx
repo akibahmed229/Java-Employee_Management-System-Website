@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const About = () => {
+const About = ({ darkMode }) => {
   const topRef = useRef(null);
 
   const developers = [
@@ -46,9 +46,9 @@ const About = () => {
       <h1 className="text-4xl font-bold mb-8 mt-8">
         About Employee Management System
       </h1>
-      <div className=" rounded-lg shadow-2xl p-6">
+      <div className="rounded-lg shadow-2xl p-6">
         <h2 className="text-2xl font-bold mb-4">Overview</h2>
-        <p className="text-gray-700">
+        <p className="text-white">
           The Employee Management System is a Java-based application that
           provides a user-friendly interface for managing employee details.
         </p>
@@ -63,7 +63,12 @@ const About = () => {
 
         <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
           {developers.map((developer, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-4">
+            <div
+              key={index}
+              className={`${
+                darkMode ? "bg-[#1f2937]" : "bg-white"
+              } rounded-lg shadow-md p-4`}
+            >
               <img
                 src={developer.photo}
                 alt={developer.name}
@@ -72,13 +77,19 @@ const About = () => {
               <h3 className="text-xl font-bold mb-2 text-center">
                 {developer.name}
               </h3>
-              <p className="text-gray-700 text-center">{developer.role}</p>
+              <p
+                className={`${
+                  darkMode ? "text-white" : "text-gray-700"
+                } text-center`}
+              >
+                {developer.role}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      <p className="text-gray-700 mt-4 mb-8">
+      <p className={`${darkMode} ? "text-white" : "text-gray-700"} mt-4 mb-8`}>
         The Employee Management System simplifies the process of managing
         employee information and ensures efficient data storage and retrieval.
       </p>

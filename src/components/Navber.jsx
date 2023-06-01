@@ -1,10 +1,20 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-function Navbar() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+
+function Navbar({ darkMode, setDarkMode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigate = useNavigate();
+
+  const toggleDarkMode = () => {
+    const updatedDarkMode = !darkMode;
+    setDarkMode(updatedDarkMode);
+    localStorage.setItem("darkMode", JSON.stringify(updatedDarkMode));
+  };
 
   const handleDropeDownChange = (e) => {
     e.preventDefault();
@@ -23,6 +33,8 @@ function Navbar() {
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const darkModeIcon = darkMode ? faSun : faMoon;
 
   return (
     <nav className="bg-gray-800 sticky top-0 z-50">
@@ -69,6 +81,14 @@ function Navbar() {
               >
                 Contact
               </Link>
+              <button
+                className={`w-[50px] h-[50px]  ${
+                  darkMode ? "text-white" : "bg-white"
+                } p-1  rounded-full `}
+                onClick={toggleDarkMode}
+              >
+                <FontAwesomeIcon icon={darkModeIcon} fontSize={"2.4rem"} />
+              </button>
             </div>
           </div>
           <div className="block md:hidden">

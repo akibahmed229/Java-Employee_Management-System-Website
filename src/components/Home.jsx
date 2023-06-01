@@ -37,7 +37,7 @@ const ImageSlider = () => {
   );
 };
 
-const Home = () => {
+const Home = ({ darkMode }) => {
   const topRef = useRef(null);
 
   useEffect(() => {
@@ -48,6 +48,8 @@ const Home = () => {
     }
   }, []);
 
+  const darkModeOn = darkMode ? "dark:bg-gray-900 text-white" : "";
+
   return (
     <div>
       <div
@@ -57,11 +59,19 @@ const Home = () => {
         <h1 className="md:text-4xl lg:text-4xl xl:text-4xl text-2xl font-bold mb-8 ">
           Employee Management System
         </h1>
-        <p className="md:text-xl lg:text-xl xl:text-xl text-gray-700 mb-8">
+        <p
+          className={`md:text-xl lg:text-xl xl:text-xl ${
+            darkModeOn ? "text-white" : "text-gray-700"
+          } mb-8`}
+        >
           Employee Management System using Java AWT &amp; Swing, with CRUD
           operations using OS file system.
         </p>
-        <div className="bg-white rounded-lg shadow-2xl  p-6">
+        <div
+          className={`
+            ${darkModeOn ? "bg-[#1f2937]" : "bg-white"}
+           rounded-lg shadow-2xl  p-6`}
+        >
           <h2 className="md:text-2xl lg:text-2xl xl:text-2xl font-bold mb-4">
             Main Features
           </h2>
@@ -77,7 +87,7 @@ const Home = () => {
             <li>Navigate through employee records using navigation buttons.</li>
             <li>Store employee data in a text file in the OS file system.</li>
           </ul>
-          <p className="text-gray-700 mt-4">
+          <p className={`${darkModeOn ? "text-white" : "text-gray-700"} mt-4`}>
             The program uses Java AWT &amp; Swing libraries for the graphical
             interface and performs CRUD operations on employee data stored in
             the OS file system.

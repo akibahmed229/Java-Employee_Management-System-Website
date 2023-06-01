@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const Contact = () => {
+const Contact = ({ darkMode }) => {
   const topRef = useRef(null);
 
   useEffect(() => {
@@ -13,14 +13,18 @@ const Contact = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center h-screen  mx-auto"
+      className={`flex flex-col items-center justify-center h-screen  mx-auto`}
       ref={topRef}
     >
-      <div className="max-w-6xl p-8 bg-white  shadow-xl rounded-lg ">
+      <div
+        className={`max-w-6xl p-8 ${
+          darkMode ? "bg-[#1f2937]" : "bg-white"
+        }  shadow-xl rounded-lg`}
+      >
         <h1 className="text-2xl font-bold md:mb-6 lg:mb-6 xl:mb-6">
           Contract Services
         </h1>
-        <p className="text-gray-600 mb-6">
+        <p className={` mb-6 ${darkMode ? "text-white" : "text-gray-600"} `}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
           cursus quam ac justo fringilla, in volutpat lacus pharetra. Aenean ac
           turpis enim.
@@ -28,7 +32,11 @@ const Contact = () => {
 
         <div className="mb-6">
           <h2 className="text-lg font-bold mb-2">Service Details</h2>
-          <ul className="list-disc list-inside text-gray-600">
+          <ul
+            className={`list-disc list-inside ${
+              darkMode ? "text-white" : "text-gray-600"
+            } `}
+          >
             <li>Lorem ipsum dolor sit amet</li>
             <li>Consectetur adipiscing elit</li>
             <li>Nulla facilisi</li>
@@ -38,14 +46,14 @@ const Contact = () => {
 
         <div>
           <h2 className="text-lg font-bold mb-2">Contact Us</h2>
-          <p className="text-gray-600 mb-2">
+          <p className={` mb-2 ${darkMode ? "text-white" : "text-gray-600"} `}>
             If you have any questions or would like to request our contract
             services, please fill out the form below or reach out to us:
           </p>
-          <p className="text-gray-600">
+          <p className={`${darkMode ? "text-white" : "text-gray-600"} `}>
             Phone: <span className="text-blue-500">+1 (123) 456-7890</span>
           </p>
-          <p className="text-gray-600">
+          <p className={`${darkMode ? "text-white" : "text-gray-600"} `}>
             Email:{" "}
             <span className="text-blue-500">info@contractservices.com</span>
           </p>
@@ -55,7 +63,9 @@ const Contact = () => {
           <div className="mb-4">
             <label
               htmlFor="name"
-              className="block text-gray-700 font-bold mb-2"
+              className={`block ${
+                darkMode ? "text-white" : "text-gray-600"
+              } font-bold mb-2`}
             >
               Name
             </label>
@@ -69,7 +79,9 @@ const Contact = () => {
           <div className="mb-4">
             <label
               htmlFor="email"
-              className="block text-gray-700 font-bold mb-2"
+              className={`block ${
+                darkMode ? "text-white" : "text-gray-600"
+              } font-bold mb-2`}
             >
               Email
             </label>
@@ -83,7 +95,9 @@ const Contact = () => {
           <div className="mb-6">
             <label
               htmlFor="message"
-              className="block text-gray-700 font-bold mb-2"
+              className={`block ${
+                darkMode ? "text-white" : "text-gray-600"
+              } font-bold mb-2`}
             >
               Message
             </label>
