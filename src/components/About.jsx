@@ -40,9 +40,13 @@ const About = ({ darkMode }) => {
         <h1 className="text-4xl font-bold mb-8 mt-8">
           About Employee Management System
         </h1>
-        <div className="rounded-lg shadow-2xl p-6 ">
+        <div
+          className={`rounded-lg shadow-2xl p-6 ${
+            darkMode ? "bg-[#1f2937]" : "bg-white"
+          }`}
+        >
           <h2 className="text-2xl font-bold mb-4">Overview</h2>
-          <p className="text-white">
+          <p className={`${darkMode ? "text-white" : "text-gray-700"} mb-8`}>
             The Employee Management System is a Java-based application that
             provides a user-friendly interface for managing employee details.
           </p>
