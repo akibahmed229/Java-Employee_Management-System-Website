@@ -5,31 +5,31 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const ImageSlider = () => {
   const images = [
     {
-      src: "/public/images/splash.png",
+      src: "/images/splash.png",
       alt: "Image 1",
     },
     {
-      src: "/public/images/login.png",
+      src: "/images/login.png",
       alt: "Image 2",
     },
     {
-      src: "/public/images/home.png",
+      src: "/images/home.png",
       alt: "Image 3",
     },
     {
-      src: "/public/images/add.png",
+      src: "/images/add.png",
       alt: "Image 4",
     },
     {
-      src: "/public/images/view.png",
+      src: "/images/view.png",
       alt: "Image 5",
     },
     {
-      src: "/public/images/update.png",
+      src: "/images/update.png",
       alt: "Image 6",
     },
     {
-      src: "/public/images/delete.png",
+      src: "/images/delete.png",
       alt: "Image 7",
     },
   ];

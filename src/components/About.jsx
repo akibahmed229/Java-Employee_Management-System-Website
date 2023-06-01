@@ -7,22 +7,22 @@ const About = ({ darkMode }) => {
     {
       name: "Akib Ahmed",
       role: "Full Stack Developer",
-      photo: "/public/images/Ahmed-logo.jpg",
+      photo: "/images/Ahmed-logo.jpg",
     },
     {
       name: "Pollob Chondro Dash",
       role: "Fronted Developer",
-      photo: "/public/images/pollob.png",
+      photo: "/images/pollob.png",
     },
     {
       name: "Himel",
       role: "UI/UX Designer",
-      photo: "/public/images/Hemel.jpg",
+      photo: "/images/Hemel.jpg",
     },
     {
       name: "Nahid",
       role: "UI/UX Designer",
-      photo: "/public/images/nahidjpg.jpg",
+      photo: "/images/nahidjpg.jpg",
     },
   ];
 
