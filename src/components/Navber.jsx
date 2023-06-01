@@ -45,13 +45,12 @@ function Navbar() {
               </Link>
 
               <select
-                onChange={handleDropeDownChange}
                 id="dropdown"
                 className="text-gray-300 bg-transparent hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
+                defaultValue="option3"
+                onChange={handleDropeDownChange}
               >
-                <option value="" disabled selected hidden>
-                  Select Category
-                </option>
+                <option value="option3" hidden>Select Category</option>
                 <option value="option1">Technology</option>
                 <option value="option2">Source Code</option>
               </select>
@@ -111,13 +110,12 @@ function Navbar() {
             </Link>
 
             <select
-              onChange={handleDropeDownChange}
               id="dropdown"
+              onChange={handleDropeDownChange}
+              defaultValue="option3"
               className="text-gray-300 bg-transparent  hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              <option value="" disabled selected hidden>
-                Select Category
-              </option>
+              <option value="option3">Select Category</option>
               <option value="option1">Technology</option>
               <option value="option2">Source Code</option>
             </select>
