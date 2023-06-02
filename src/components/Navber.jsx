@@ -87,14 +87,15 @@ function Navbar({ darkMode, setDarkMode }) {
               >
                 Contact
               </Link>
-              <button
-                className={`w-[50px] h-[50px] hover:scale-50 hover:transition-all hover:duration-300 ${
-                  darkMode ? "text-white" : "bg-white"
-                } p-1  rounded-full `}
-                onClick={toggleDarkMode}
-              >
-                <FontAwesomeIcon icon={darkModeIcon} fontSize={"2.4rem"} />
-              </button>
+              <div onClick={toggleDarkMode}>
+                <button
+                  className={`w-[50px] h-[50px] hover:scale-50 hover:transition-all hover:duration-300 ${
+                    darkMode ? "text-white" : "bg-white"
+                  } p-1  rounded-full `}
+                >
+                  <FontAwesomeIcon icon={darkModeIcon} fontSize={"2.4rem"} />
+                </button>
+              </div>
             </div>
           </div>
           <div className="block md:hidden">
