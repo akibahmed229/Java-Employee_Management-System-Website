@@ -23,6 +23,7 @@ function App() {
   return (
     <div className={`${darkModeOn}`}>
       <Navber darkMode={darkMode} setDarkMode={setDarkMode} />
+
       <Routes>
         <Route path="/" element={<Home darkMode={darkMode} />} />
         <Route path="/about" element={<About darkMode={darkMode} />} />
@@ -33,6 +34,7 @@ function App() {
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+
       <Footer />
     </div>
   );
