@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`${darkModeOn} `}>
+    <div className={`${darkModeOn}`}>
       <Navber darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
         <Route path="/" element={<Home darkMode={darkMode} />} />

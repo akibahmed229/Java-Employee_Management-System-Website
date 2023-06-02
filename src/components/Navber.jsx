@@ -18,17 +18,27 @@ function Navbar({ darkMode, setDarkMode }) {
 
   const handleDropeDownChange = (e) => {
     e.preventDefault();
+
     switch (e.target.value) {
-      case "option1":
+      case "option2":
         navigate("/technology");
         setTimeout(() => {
-          e.target.value = "option3";
+          e.target.value = "option1";
         }, 500);
         break;
-      case "option2":
+      case "option3":
         window.open("https://github.com/akibahmed229/Java-CRUD-App", `_blank`);
         setTimeout(() => {
-          e.target.value = "option3";
+          e.target.value = "option1";
+        }, 500);
+        break;
+      case "option4":
+        window.open(
+          "https://github.com/akibahmed229/Java-Employee_Management-System-Website",
+          `_blank`
+        );
+        setTimeout(() => {
+          e.target.value = "option1";
         }, 500);
         break;
       default:
@@ -65,14 +75,15 @@ function Navbar({ darkMode, setDarkMode }) {
               <select
                 id="dropdown"
                 className="text-gray-300 bg-transparent hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
-                defaultValue="option3"
+                defaultValue="option1"
                 onChange={handleDropeDownChange}
               >
-                <option value="option3" hidden>
+                <option value="option1" hidden>
                   Select Category
                 </option>
-                <option value="option1">Technology</option>
-                <option value="option2">Source Code</option>
+                <option value="option2">Technology</option>
+                <option value="option3">JavaProject Code</option>
+                <option value="option4">Site Source Code</option>
               </select>
 
               <Link
@@ -144,9 +155,12 @@ function Navbar({ darkMode, setDarkMode }) {
               defaultValue="option3"
               className="text-gray-300 bg-transparent  hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              <option value="option3">Select Category</option>
-              <option value="option1">Technology</option>
-              <option value="option2">Source Code</option>
+              <option value="option1" hidden>
+                Select Category
+              </option>
+              <option value="option2">Technology</option>
+              <option value="option3">JavaProject Code</option>
+              <option value="option4">Site Source Code</option>
             </select>
 
             <Link
