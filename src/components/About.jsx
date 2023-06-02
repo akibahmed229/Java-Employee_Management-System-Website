@@ -91,7 +91,7 @@ const About = ({ darkMode }) => {
         </div>
 
         <p
-          className={`${darkMode} ? "text-white" : "text-gray-700"} mt-4 mb-8`}
+          className={`${darkMode} ? "text-white" : "text-gray-700"} mt-4 mb-8 text-center`}
         >
           The Employee Management System simplifies the process of managing
           employee information and ensures efficient data storage and retrieval.
