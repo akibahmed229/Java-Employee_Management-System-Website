@@ -1,6 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Contact = ({ darkMode }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const topRef = useRef(null);
 
   useEffect(() => {
@@ -11,12 +15,25 @@ const Contact = ({ darkMode }) => {
     }
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (name === "" || email === "" || message === "") {
+      alert("Please fill all the fields");
+    } else {
+      alert("Your message has been sent successfully");
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
+  };
+
   return (
     <div
       className={`flex flex-col items-center justify-center   mx-auto`}
       ref={topRef}
     >
-      <div className="h-screen  flex flex-col justify-center items-center">
+      <div className="h-screen  flex flex-col justify-center items-center ">
         <div
           className={`max-w-6xl p-8 ${
             darkMode ? "bg-[#1f2937]" : "bg-white"
@@ -101,7 +118,7 @@ const Contact = ({ darkMode }) => {
       <div
         className={`${
           darkMode ? "bg-[#1f2937]" : "bg-white"
-        } w-[60vw]  p-8  shadow-xl rounded-lg  m-20`}
+        } w-[60vw]  p-8  shadow-xl rounded-lg  m-20 flex flex-col sm:mt-[20rem]`}
       >
         <h2 className="text-lg font-bold mb-2">Contact Us</h2>
         <p className={` mb-2 ${darkMode ? "text-white" : "text-gray-600"} `}>
@@ -115,7 +132,7 @@ const Contact = ({ darkMode }) => {
           Email: <span className="text-blue-500">akib4418@gmail.com</span>
         </p>
 
-        <form className="mt-8 p-8">
+        <form className="mt-8 p-8" onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
               htmlFor="name"
@@ -128,7 +145,10 @@ const Contact = ({ darkMode }) => {
             <input
               type="text"
               id="name"
-              className="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full border border-gray-300 text-black  rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
             />
           </div>
 
@@ -144,7 +164,10 @@ const Contact = ({ darkMode }) => {
             <input
               type="email"
               id="email"
-              className="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full border border-gray-300 text-black rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
             />
           </div>
 
@@ -160,7 +183,10 @@ const Contact = ({ darkMode }) => {
             <textarea
               id="message"
               rows="5"
-              className="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
+              required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="w-full border border-gray-300 text-black rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
             ></textarea>
           </div>
           <button
