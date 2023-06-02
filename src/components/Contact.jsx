@@ -88,6 +88,12 @@ const Contact = ({ darkMode }) => {
                 to provide assistance and address any questions or concerns.
               </li>
             </ul>
+            <p className="mt-6">
+              Overall, our React Tailwind site provides an engaging platform to
+              showcase the Java Employee Management project, allowing visitors
+              to explore its features, understand its benefits, and get in touch
+              with our team for further information and support.
+            </p>
           </div>
         </div>
       </div>
@@ -106,8 +112,7 @@ const Contact = ({ darkMode }) => {
           Phone: <span className="text-blue-500">+1 (123) 456-7890</span>
         </p>
         <p className={`${darkMode ? "text-white" : "text-gray-600"} `}>
-          Email:{" "}
-          <span className="text-blue-500">info@contractservices.com</span>
+          Email: <span className="text-blue-500">akib4418@gmail.com</span>
         </p>
 
         <form className="mt-8 p-8">

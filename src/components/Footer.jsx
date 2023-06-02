@@ -34,18 +34,40 @@ const Footer = () => {
             <h2 className="text-lg font-bold mb-2">Social Media</h2>
             <ul className="list-none">
               <li className="mb-2 cursor-pointer">
-                <a onClick={() => window.open("https://www.facebook.com")}>
+                <a
+                  onClick={() =>
+                    window.open("https://www.facebook.com/AhmedAkib229")
+                  }
+                >
                   Facebook
                 </a>
               </li>
               <li className="mb-2 cursor-pointer">
-                <a onClick={() => window.open("https://twitter.com")}>
+                <a
+                  onClick={() =>
+                    window.open("https://twitter.com/ahmedakib229")
+                  }
+                >
                   Twitter
+                </a>
+              </li>{" "}
+              <li className="mb-2 cursor-pointer">
+                <a
+                  onClick={() =>
+                    window.open("https://www.linkedin.com/in/akibahmed229")
+                  }
+                >
+                  LinkeIn
                 </a>
               </li>
               <li className="mb-2 cursor-pointer">
-                <a onClick={() => window.open("https://instagram.com")}>
-                  Instagram
+                <a onClick={() => window.open("https://instagram.com")}></a>
+              </li>{" "}
+              <li className="mb-2 cursor-pointer">
+                <a
+                  onClick={() => window.open("https://github.com/akibahmed229")}
+                >
+                  GitHub
                 </a>
               </li>
             </ul>
