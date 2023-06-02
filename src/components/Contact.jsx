@@ -29,11 +29,11 @@ const Contact = ({ darkMode }) => {
   };
 
   return (
-    <div
-      className={`flex flex-col items-center justify-center   mx-auto`}
-      ref={topRef}
-    >
-      <div className="h-screen  flex flex-col justify-center items-center ">
+    <div>
+      <div
+        ref={topRef}
+        className="flex flex-col justify-center items-center  min-h-screen mb-10 mt-10"
+      >
         <div
           className={`max-w-6xl p-8 ${
             darkMode ? "bg-[#1f2937]" : "bg-white"
@@ -81,6 +81,7 @@ const Contact = ({ darkMode }) => {
 
               <li>
                 Screenshots and Demo: Through screenshots and a live demo, we
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 showcase the system's user interface, demonstrating its
                 intuitive design and functionality. Visitors can visually
                 experience the system and its features in action.
@@ -115,87 +116,89 @@ const Contact = ({ darkMode }) => {
         </div>
       </div>
 
-      <div
-        className={`${
-          darkMode ? "bg-[#1f2937]" : "bg-white"
-        } w-[60vw]  p-8  shadow-xl rounded-lg  m-20 flex flex-col sm:mt-[20rem]`}
-      >
-        <h2 className="text-lg font-bold mb-2">Contact Us</h2>
-        <p className={` mb-2 ${darkMode ? "text-white" : "text-gray-600"} `}>
-          If you have any questions or would like to request our contract
-          services, please fill out the form below or reach out to us:
-        </p>
-        <p className={`${darkMode ? "text-white" : "text-gray-600"} `}>
-          Phone: <span className="text-blue-500">+1 (123) 456-7890</span>
-        </p>
-        <p className={`${darkMode ? "text-white" : "text-gray-600"} `}>
-          Email: <span className="text-blue-500">akib4418@gmail.com</span>
-        </p>
+      <div className="flex flex-col justify-center items-center mb-8">
+        <div
+          className={`${
+            darkMode ? "bg-[#1f2937]" : "bg-white"
+          } p-8 shadow-xl rounded-lg`}
+        >
+          <h2 className="text-lg font-bold mb-2">Contact Us</h2>
+          <p className={` mb-2 ${darkMode ? "text-white" : "text-gray-600"} `}>
+            If you have any questions or would like to request our contract
+            services, please fill out the form below or reach out to us:
+          </p>
+          <p className={`${darkMode ? "text-white" : "text-gray-600"} `}>
+            Phone: <span className="text-blue-500">+1 (123) 456-7890</span>
+          </p>
+          <p className={`${darkMode ? "text-white" : "text-gray-600"} `}>
+            Email: <span className="text-blue-500">akib4418@gmail.com</span>
+          </p>
 
-        <form className="mt-8 p-8" onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label
-              htmlFor="name"
-              className={`block ${
-                darkMode ? "text-white" : "text-gray-600"
-              } font-bold mb-2`}
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full border border-gray-300 text-black  rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
-            />
-          </div>
+          <form className="mt-8 p-8" onSubmit={handleSubmit}>
+            <div className="mb-4">
+              <label
+                htmlFor="name"
+                className={`block ${
+                  darkMode ? "text-white" : "text-gray-600"
+                } font-bold mb-2`}
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full border border-gray-300 text-black  rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
+              />
+            </div>
 
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className={`block ${
-                darkMode ? "text-white" : "text-gray-600"
-              } font-bold mb-2`}
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full border border-gray-300 text-black rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
-            />
-          </div>
+            <div className="mb-4">
+              <label
+                htmlFor="email"
+                className={`block ${
+                  darkMode ? "text-white" : "text-gray-600"
+                } font-bold mb-2`}
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full border border-gray-300 text-black rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
+              />
+            </div>
 
-          <div className="mb-6">
-            <label
-              htmlFor="message"
-              className={`block ${
-                darkMode ? "text-white" : "text-gray-600"
-              } font-bold mb-2`}
+            <div className="mb-6">
+              <label
+                htmlFor="message"
+                className={`block ${
+                  darkMode ? "text-white" : "text-gray-600"
+                } font-bold mb-2`}
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows="5"
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="w-full border border-gray-300 text-black rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
             >
-              Message
-            </label>
-            <textarea
-              id="message"
-              rows="5"
-              required
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className="w-full border border-gray-300 text-black rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-          >
-            Submit
-          </button>
-        </form>
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
