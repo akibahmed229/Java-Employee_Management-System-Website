@@ -98,7 +98,7 @@ function Navbar({ darkMode, setDarkMode }) {
               </Link>
               <div onClick={toggleDarkMode}>
                 <button
-                  className={`w-[50px] h-[50px] hover:scale-50 hover:transition-all hover:duration-300 ${
+                  className={`w-[50px] h-[50px] hover:scale-50  hover:duration-400 ${
                     darkMode ? "text-white" : "bg-white"
                   } p-1  rounded-full `}
                 >
