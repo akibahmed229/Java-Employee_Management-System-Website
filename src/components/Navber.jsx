@@ -72,7 +72,7 @@ function Navbar({ darkMode, setDarkMode }) {
 
               <select
                 id="dropdown"
-                className="text-gray-300 bg-transparent hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
+                className="text-gray-300 bg-[#1F2937] hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
                 defaultValue="option1"
                 onChange={handleDropeDownChange}
               >
