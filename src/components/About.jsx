@@ -74,7 +74,7 @@ const About = ({ darkMode }) => {
               <img
                 src={developer.photo}
                 alt={developer.name}
-                className="object-cover w-[35rem] h-[30rem] mx-auto mb-4"
+                className="object-cover w-[35rem] h-[30rem] mx-auto mb-4  rounded-lg"
               />
               <h3 className="text-xl font-bold mb-2 text-center">
                 {developer.name}
