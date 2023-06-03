@@ -45,7 +45,7 @@ const ImageSlider = () => {
       className="mt-8 mb-8"
     >
       {images.map((image, index) => (
-        <div key={index} className="mb-10 w-[30%] h-[auto] m-auto">
+        <div key={index} className="mb-10 w-[45%] h-[auto] m-auto">
           <img src={image.src} alt={image.alt} className="object-cover" />
         </div>
       ))}
