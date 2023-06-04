@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-  const darkModeOn = darkMode && "dark:bg-gray-900  dark:text-white";
+  const darkModeOn = darkMode && "bg-gray-900  text-white";
 
   useEffect(() => {
     const storedDarkMode = localStorage.getItem("darkMode");
